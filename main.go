@@ -7,18 +7,16 @@ import (
 
 func main() {
 	var s stacks.Stacks
-	s.Push("Algorithms")
-	s.Push("And")
 	s.Push("Data Structure")
+	s.Push("And")
+	s.Push("Algorithms")
 
 	fmt.Printf("%q", s)
 
-	fmt.Println("")
-
-	for len(s) > 0 {
+	for !s.IsEmpty() {
 		x, y := s.Pop()
 		if y == true {
-			fmt.Println(x)
+			fmt.Printf("%q", x)
 		}
 	}
 }

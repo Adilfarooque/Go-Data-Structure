@@ -2,7 +2,7 @@ package stacks
 
 type Stacks []string
 
-func (s *Stacks)isEmpty()bool{
+func (s *Stacks)IsEmpty()bool{
 	return len(*s) == 0
 }
 
@@ -11,7 +11,7 @@ func (s *Stacks)Push(str string){
 }
 
 func (s *Stacks)Pop()(string,bool){
-	if s.isEmpty() {
+	if s.IsEmpty() {
 		return "",false
 	}else {
 		index:=len(*s)-1

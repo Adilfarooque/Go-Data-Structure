@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"DsaWorld/stacks"
+)
 
 func main() {
-	fmt.Println("Learning Data-Structure")
+	var s stacks.Stacks
+
+	
+
 }

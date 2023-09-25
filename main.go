@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
+	//Reversed a String
+	ipt:="Adil Farooque"
+	result:=stacks.ReversedString(ipt)
+	fmt.Println(result)
 
 	//isvalid Question Neetcode.
 	input := "([]{})" // Replace with your input string

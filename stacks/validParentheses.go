@@ -1,5 +1,6 @@
 package stacks
 
+
 func IsValid(s string) bool {
 	stack := []rune{} // Create an empty stack using a rune slice
 

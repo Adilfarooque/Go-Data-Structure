@@ -8,12 +8,13 @@ import (
 func main() {
 
 	//isvalid Question Neetcode.
-	input := "()[]{}" // Replace with your input string
+	input := "([]{})" // Replace with your input string
 	if stacks.IsValid(input) {
 		fmt.Println("Valid parentheses")
 	} else {
 		fmt.Println("Invalid parentheses")
 	}
+
 	// Stack slice
 	var s stacks.Stacks
 	s.Push("Data Structure")

@@ -1,18 +1,29 @@
 package linkedlist
 
+import "fmt"
+
 type Node struct {
 	Data int
 	Next *Node
 }
 
 type LinkedList struct {
-	Head   *Node
-	Length int
+	Head *Node
+	Leng int
 }
 
-func (L *LinkedList) Prepend(n *Node) {
-	Second := L.Head
-	L.Head = n
-	L.Head.Next = Second
-	L.Length++
+func (l *LinkedList) Prepend(val *Node) {
+	Sval := l.Head
+	l.Head = val
+	l.Head.Next = Sval
+}
+
+func (l LinkedList) PrintListData() {
+	Toprint := l.Head
+	for l.Leng != 0 {
+		fmt.Printf("%d", Toprint.Data)
+		Toprint = Toprint.Next
+		l.Leng--
+	}
+	fmt.Println("")
 }

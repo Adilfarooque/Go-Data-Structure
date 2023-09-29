@@ -57,4 +57,9 @@ func main() {
 	mylist.Prepend(nord9)
 
 	mylist.PrintListData()
+
+	//Single Linked List Documentation
+	mList:=linkedlist.Link{}
+	mList.Head()
+
 }

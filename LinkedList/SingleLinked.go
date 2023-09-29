@@ -18,7 +18,7 @@ func (l *LinkedList) Prepend(val *Node) {
 	l.Head.Next = Sval
 }
 
-func (l LinkedList) PrintListData() {
+func (l LinkedList)PrintListData() {
 	Toprint := l.Head
 	for l.Leng != 0 {
 		fmt.Printf("%d", Toprint.Data)

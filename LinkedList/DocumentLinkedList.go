@@ -13,3 +13,8 @@ type Link struct {
 func (l *Link) Size() int {
 	return l.Count
 }
+
+func (l *Link) IsEmpty()bool{
+	return l.Count == 0
+}
+

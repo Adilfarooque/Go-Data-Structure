@@ -18,3 +18,9 @@ func (l *Link) IsEmpty()bool{
 	return l.Count == 0
 }
 
+func (l *Link)AddHead(Value int){
+	curr:=l.Head
+	l.Head =&Node{Value:90}
+	l.Count++
+}
+

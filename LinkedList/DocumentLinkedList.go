@@ -11,11 +11,13 @@ type Link struct {
 	Head  *Nod
 	Count int
 }
-	// Size Of LL
+
+// Size Of LL
 func (l *Link) Size() int {
 	return l.Count
 }
-	//Check LL is empty
+
+//Check LL is empty
 func (l *Link) IsEmpty() bool {
 	return l.Count == 0
 }
@@ -55,14 +57,27 @@ func (l *Link) Print() {
 
 //Searh Element in Linked List
 
-func (l *Link)IsPresent(data int)bool{
-	temp:=l.Head
-	
-	for temp != nil{
-		if temp.Val == data{
+func (l *Link) IsPresent(data int) bool {
+	temp := l.Head
+
+	for temp != nil {
+		if temp.Val == data {
 			return true
 		}
 	}
 	return false
 }
 
+//Delete First Element in LL
+
+func (l *Link) RemoveHead() (int, bool) {
+	if l.IsEmpty() {
+		fmt.Println("EmptyListError")
+		return 0, false
+	}
+	val := l.Head.Val
+	l.Head = l.Head.Next
+	l.Count--
+	return val, true
+
+}

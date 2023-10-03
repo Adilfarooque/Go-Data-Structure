@@ -7,10 +7,12 @@ type Node struct {
 	Next *Node
 }
 
+
 type LinkedList struct {
 	Head *Node
 	Leng int
 }
+
 
 func (l *LinkedList) Prepend(val *Node) {
 	Sval := l.Head

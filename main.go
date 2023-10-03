@@ -59,7 +59,10 @@ func main() {
 	mylist.PrintListData()
 
 	//Single Linked List Documentation
-	mList:=linkedlist.Link{}
-	mList.Head()
-
+	m := linkedlist.Link{}
+	m.AddHead(10)
+	m.AddHead(67)
+	m.AddHead(193)
+	m.AddHead(34)
+	m.Print()
 }

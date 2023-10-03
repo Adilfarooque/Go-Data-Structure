@@ -11,21 +11,22 @@ type Link struct {
 	Head  *Nod
 	Count int
 }
-
+	// Size Of LL
 func (l *Link) Size() int {
 	return l.Count
 }
-
+	//Check LL is empty
 func (l *Link) IsEmpty() bool {
 	return l.Count == 0
 }
 
+// Add Node into Ll
 func (l *Link) AddHead(Val int) {
-	curr := l.Head
 	l.Head = &Nod{Val: Val}
 	l.Count++
 }
 
+// Add Node At last Into LL
 func (l *Link) AddTail(Val int) {
 	curr := l.Head
 	newNod := &Nod{Val: Val}
@@ -42,11 +43,26 @@ func (l *Link) AddTail(Val int) {
 	curr.Next = newNod
 }
 
+//Print The linked List Value
 func (l *Link) Print() {
 	temp := l.Head
 	for temp != nil {
-		fmt.Print(temp.Val,"")
+		fmt.Print(temp.Val, "")
 		temp = temp.Next
 	}
 	fmt.Println("")
 }
+
+//Searh Element in Linked List
+
+func (l *Link)IsPresent(data int)bool{
+	temp:=l.Head
+	
+	for temp != nil{
+		if temp.Val == data{
+			return true
+		}
+	}
+	return false
+}
+

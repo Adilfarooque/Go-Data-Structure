@@ -81,3 +81,32 @@ func (l *Link) RemoveHead() (int, bool) {
 	return val, true
 
 }
+
+//Delete Node from LL from given Value
+
+func (l *Link) DeleteNode(delval int) bool {
+	temp := l.Head
+
+	if l.IsEmpty() {
+		fmt.Println("EmptyListError")
+		return false
+	}
+
+	if delval == l.Head.Val {
+		l.Head = l.Head.Next
+		l.Count--
+		return true
+	}
+
+	for temp.Next != nil {
+		if temp.Next.Val == delval {
+			temp.Next = temp.Next.Next
+			l.Count--
+			return true
+		}
+		temp = temp.Next
+	}
+	return false
+}
+
+

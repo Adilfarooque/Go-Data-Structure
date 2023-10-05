@@ -1,20 +1,29 @@
 package queues
 
+import "fmt"
 
-type Node struct{
+type Node struct {
 	Next *Node
-	Val int
+	Val  int
 }
-type Queue struct{
+type Queue struct {
 	Head *Node
 	Tail *Node
 	Size int
 }
 
-func (qu *Queue)Lsize()int{
+func (qu *Queue) Lsize() int {
 	return qu.Size
 }
 
-func (qu *Queue)IzEmpty()bool{
+func (qu *Queue) IzEmpty() bool {
 	return qu.Size == 0
+}
+
+func (qu *Queue) Peak() (int, bool) {
+	if qu.IzEmpty() {
+		fmt.Println("EmaptyListError")
+		return 0 , false
+	}
+	return qu.Head.Val,true
 }

@@ -27,3 +27,11 @@ func (qu *Queue) Peak() (int, bool) {
 	}
 	return qu.Head.Val,true
 }
+
+func (qu *Queue)Print(){
+	temp:=qu.Head
+	for temp!=nil{
+		fmt.Println(temp.Val,"")
+		temp = temp.Next
+	}
+}

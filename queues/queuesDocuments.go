@@ -18,3 +18,4 @@ func (q *Queues)Add(value int)bool{
 	q.Back = (q.Back+1)%(capcity-1)
 	return true
 }
+

@@ -9,6 +9,14 @@ type Queues struct{
 	Back int
 }
 
+func (q *Queues)SizeL()int{
+	return q.Size
+}
+
+func (q *Queues)Empty()bool{
+	return q.Size == 0
+}
+
 func (q *Queues)Add(value int)bool{
 	if q.Size >= capcity{
 		return false
@@ -29,3 +37,5 @@ func (q *Queues)Remove()(int,bool){
 	q.Front = (q.Front + 1) % (capcity - 1)
 	return value,true
 }
+
+
